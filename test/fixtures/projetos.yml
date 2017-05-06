@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descricao: MyString
+  data_inicio: 2017-05-06
+  data_entrega: 2017-05-06
+  valor_hora: 9.99
+  empresa: one
+  observacoes: MyText
+
+two:
+  descricao: MyString
+  data_inicio: 2017-05-06
+  data_entrega: 2017-05-06
+  valor_hora: 9.99
+  empresa: two
+  observacoes: MyText

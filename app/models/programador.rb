@@ -1,0 +1,2 @@
+class Programador < ApplicationRecord
+end

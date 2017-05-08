@@ -1,6 +1,7 @@
 RailsAdmin.config do |config|
   ### Popular gems integration
 
+  config.main_app_name = ["Gerenciador de projetos", ""]
   ## == Devise ==
   config.authenticate_with do
     warden.authenticate! scope: :user

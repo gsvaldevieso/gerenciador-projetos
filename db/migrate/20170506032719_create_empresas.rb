@@ -1,10 +1,10 @@
 class CreateEmpresas < ActiveRecord::Migration[5.0]
   def change
-    create_table :empresas do |t|
-      t.string :nome
+    create_table :companies do |t|
+      t.string :name
       t.string :cnpj
-      t.string :site
-      t.text :observacoes
+      t.string :website
+      t.text :aditionals
 
       t.timestamps
     end

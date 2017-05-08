@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'carrierwave'
+
+gem 'rails_admin_rollincode', '~> 1.0'
+
 gem 'cancancan'
 
 gem 'rails_admin'

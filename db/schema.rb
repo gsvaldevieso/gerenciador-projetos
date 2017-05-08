@@ -10,50 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170506034527) do
+ActiveRecord::Schema.define(version: 20170508033437) do
 
-  create_table "atividades", force: :cascade do |t|
-    t.string   "descricao"
-    t.text     "analise"
-    t.date     "data_inicio"
-    t.date     "data_entrega"
-    t.integer  "horas"
-    t.boolean  "finalizada"
-    t.integer  "programador_id"
-    t.integer  "projeto_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["programador_id"], name: "index_atividades_on_programador_id"
-    t.index ["projeto_id"], name: "index_atividades_on_projeto_id"
-  end
-
-  create_table "empresas", force: :cascade do |t|
-    t.string   "nome"
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
     t.string   "cnpj"
-    t.string   "site"
-    t.text     "observacoes"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "programadors", force: :cascade do |t|
-    t.string   "nome"
-    t.string   "email"
-    t.string   "telefone"
+    t.string   "website"
+    t.text     "aditionals"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "projetos", force: :cascade do |t|
-    t.string   "descricao"
-    t.date     "data_inicio"
-    t.date     "data_entrega"
-    t.decimal  "valor_hora"
-    t.integer  "empresa_id"
-    t.text     "observacoes"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["empresa_id"], name: "index_projetos_on_empresa_id"
+  create_table "programmers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.date     "start"
+    t.date     "deadline"
+    t.decimal  "price"
+    t.integer  "company_id"
+    t.text     "aditionals"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_projects_on_company_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "name"
+    t.text     "resume"
+    t.date     "start"
+    t.date     "deadline"
+    t.integer  "hours"
+    t.boolean  "finished"
+    t.integer  "programmer_id"
+    t.integer  "project_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "file"
+    t.index ["programmer_id"], name: "index_tasks_on_programmer_id"
+    t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 
   create_table "users", force: :cascade do |t|

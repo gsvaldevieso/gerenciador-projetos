@@ -1,14 +1,14 @@
 class CreateAtividades < ActiveRecord::Migration[5.0]
   def change
-    create_table :atividades do |t|
-      t.string :descricao
-      t.text :analise
-      t.date :data_inicio
-      t.date :data_entrega
-      t.integer :horas
-      t.boolean :finalizada
-      t.references :programador, foreign_key: true
-      t.references :projeto, foreign_key: true
+    create_table :tasks do |t|
+      t.string :name
+      t.text :resume
+      t.date :start
+      t.date :deadline
+      t.integer :hours
+      t.boolean :finished
+      t.references :programmer, foreign_key: true
+      t.references :project, foreign_key: true
 
       t.timestamps
     end

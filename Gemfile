@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'devise-bootstrap-views'
+
 gem 'carrierwave'
 
 gem 'rails_admin_rollincode', '~> 1.0'

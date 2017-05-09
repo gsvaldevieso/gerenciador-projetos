@@ -1,6 +1,43 @@
 RailsAdmin.config do |config|
-  ### Popular gems integration
 
+  config.model Task do
+   edit do
+      configure :start do
+        strftime_format '%d/%m/%Y'
+      end
+      configure :deadline do
+        strftime_format '%d/%m/%Y'
+      end
+    end
+    list do
+      configure :start do
+        strftime_format '%d/%m/%Y'
+      end
+      configure :deadline do
+        strftime_format '%d/%m/%Y'
+      end
+    end
+  end
+  config.model Project do
+   edit do
+      configure :start do
+        strftime_format '%d/%m/%Y'
+      end
+      configure :deadline do
+        strftime_format '%d/%m/%Y'
+      end
+    end
+    list do
+      configure :start do
+        strftime_format '%d/%m/%Y'
+      end
+      configure :deadline do
+        strftime_format '%d/%m/%Y'
+      end
+    end
+  end
+
+  ### Popular gems integration
   config.main_app_name = ["Gerenciador de projetos", ""]
   ## == Devise ==
   config.authenticate_with do

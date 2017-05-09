@@ -43,6 +43,9 @@ pt-BR:
       x_days:
         one: "1 dias"
         other: "%{count} dias"
+      about_x_hours:
+        one: "1 hora"
+        other: "%{count} horas"
   views:
   admin:
     home:

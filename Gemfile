@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'brazilian-rails'
+
+gem 'bootstrap-sass'
+
 gem 'devise-bootstrap-views'
 
 gem 'carrierwave'

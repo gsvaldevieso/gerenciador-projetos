@@ -26,6 +26,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  database: d2tlhf0m7lu44n
   pool: 5
+  username: varupbtqwzicrz
+  password: 25040f15b5a3913cebb22a0b091a479a7cf16a3bcd8b7849ebcffef280c42d4d
+  port: 5432
+  host: ec2-23-21-220-167.compute-1.amazonaws.com
